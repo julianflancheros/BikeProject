@@ -1,5 +1,183 @@
 extends layout
 
-block content
+//- block content
   h1= title
   p Welcome to #{title}
+
+block content 
+  html
+  head
+  body.is-preload
+    // Wrapper
+    #wrapper
+      // Header
+      header#header.alt
+        a.logo(href='index.html')
+          strong Forty
+          span by HTML5 UP
+        nav
+          a(href='#menu') Menu
+      // Menu
+      nav#menu
+        ul.links
+          li
+            a(href='index.html') Home
+          li
+            a(href='landing.html') Landing
+          li
+            a(href='generic.html') Generic
+          li
+            a(href='elements.html') Elements
+        ul.actions.stacked
+          li
+            a.button.primary.fit(href='#') Get Started
+          li
+            a.button.fit(href='#') Log In
+      // Banner
+      section#banner.major
+        .inner
+          header.major
+            h1 Hi, my name is Forty
+          .content
+            p
+              | A responsive site template designed by HTML5 UP
+              br
+              |  and released under the Creative Commons.
+            ul.actions
+              li
+                a.button.next.scrolly(href='#one') Get Started
+      // Main
+      #main
+        // One
+        section#one.tiles
+          article
+            span.image
+              img(src='images/pic01.jpg' alt='')
+            header.major
+              h3
+                a.link(href='landing.html') Aliquam
+              p Ipsum dolor sit amet
+          article
+            span.image
+              img(src='images/pic02.jpg' alt='')
+            header.major
+              h3
+                a.link(href='landing.html') Tempus
+              p feugiat amet tempus
+          article
+            span.image
+              img(src='images/pic03.jpg' alt='')
+            header.major
+              h3
+                a.link(href='landing.html') Magna
+              p Lorem etiam nullam
+          article
+            span.image
+              img(src='images/pic04.jpg' alt='')
+            header.major
+              h3
+                a.link(href='landing.html') Ipsum
+              p Nisl sed aliquam
+          article
+            span.image
+              img(src='images/pic05.jpg' alt='')
+            header.major
+              h3
+                a.link(href='landing.html') Consequat
+              p Ipsum dolor sit amet
+          article
+            span.image
+              img(src='images/pic06.jpg' alt='')
+            header.major
+              h3
+                a.link(href='landing.html') Etiam
+              p Feugiat amet tempus
+        // Two
+        section#two
+          .inner
+            header.major
+              h2 Massa libero
+            p
+              | Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+            ul.actions
+              li
+                a.button.next(href='landing.html') Get Started
+
+        .container 
+          #main_map
+
+
+      // Contact
+      section#contact
+        .inner
+          section
+            form(method='post' action='#')
+              .fields
+                .field.half
+                  label(for='name') Name
+                  input#name(type='text' name='name')
+                .field.half
+                  label(for='email') Email
+                  input#email(type='text' name='email')
+                .field
+                  label(for='message') Message
+                  textarea#message(name='message' rows='6')
+              ul.actions
+                li
+                  input.primary(type='submit' value='Send Message')
+                li
+                  input(type='reset' value='Clear')
+          section.split
+            section
+              .contact-method
+                span.icon.solid.alt.fa-envelope
+                h3 Email
+                a(href='#') information@untitled.tld
+            section
+              .contact-method
+                span.icon.solid.alt.fa-phone
+                h3 Phone
+                span (000) 000-0000 x12387
+            section
+              .contact-method
+                span.icon.solid.alt.fa-home
+                h3 Address
+                span
+                  | 1234 Somewhere Road #5432
+                  br
+                  |  Nashville, TN 00000
+                  br
+                  |  United States of America
+      // Footer
+      footer#footer
+        .inner
+          ul.icons
+            li
+              a.icon.brands.alt.fa-twitter(href='#')
+                span.label Twitter
+            li
+              a.icon.brands.alt.fa-facebook-f(href='#')
+                span.label Facebook
+            li
+              a.icon.brands.alt.fa-instagram(href='#')
+                span.label Instagram
+            li
+              a.icon.brands.alt.fa-github(href='#')
+                span.label GitHub
+            li
+              a.icon.brands.alt.fa-linkedin-in(href='#')
+                span.label LinkedIn
+          ul.copyright
+            li © Untitled
+            li
+              | Design: 
+              a(href='https://html5up.net') HTML5 UP
+    // Scripts
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/jquery.scrolly.min.js')
+    script(src='/javascripts/jquery.scrollex.min.js')
+    script(src='/javascripts/browser.min.js')
+    script(src='/javascripts/breakpoints.min.js')
+    script(src='/javascripts/util.js')
+    script(src='/javascripts/main.js')
+    script(src='/javascripts/map.js')
